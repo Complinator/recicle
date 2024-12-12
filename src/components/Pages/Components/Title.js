@@ -10,10 +10,10 @@ const Title = () => {
           <Card className="bg-light border-0 p-4">
             <Card.Body>
               <h2 className="text-navy mb-4" style={{ color: '#002D5A' }}>
-                Responsabilidad del productor reunida en un solo lugar
+              ¡Dale una Segunda Vida a tus Electrónicos!
               </h2>
               <p className="mb-3">
-              Manejamos la responsabilidad del productor para empresas que importan o fabrican productos eléctricos y baterías. El acuerdo con RENAS se puede ampliar con la membresía para embalaje.{' '}
+              Los residuos electrónicos no son el fin, sino el inicio de un ciclo. Aprende a reciclar, reparar y reutilizar tus dispositivos para proteger el planeta y fomentar la economía circular.{' '}
                 <Link to='/' className="text-decoration-none">Leer más</Link>
               </p>
               <div className="mt-4">
@@ -43,9 +43,9 @@ const Title = () => {
             className="position-absolute"
             style={{
               top: '10%',
-              right: '10%',
+              right: '15%',
               maxWidth: '100%',
-              height: '280px',
+              height: '240px',
               zIndex: 2
             }}
           />

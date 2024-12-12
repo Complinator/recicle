@@ -105,3 +105,21 @@
 .card-hover-glow:hover .card-img-dynamic {
     transform: scale(1.1); /* Expands the image on hover */
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Set the button color to black */
+  border-radius: 50%; /* Optional: make it circular */
+  width: 2.5rem; /* Adjust size if needed */
+  height: 2.5rem;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #333; /* Slightly lighter black on hover */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1); /* Invert the arrow icon color if needed */
+}
