@@ -37,7 +37,7 @@ const Points = () => {
   ];
 
   return (
-    <Container fluid className="bg-light py-4">
+    <Container fluid className="bg-light py-4 mt-4">
       <Row className="justify-content-center">
         <Col md={10}>
           <Card>

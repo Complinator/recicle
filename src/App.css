@@ -74,3 +74,14 @@
     transform: scaleX(1);
     transform-origin: left;
 }
+
+.card-hover-tilt {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center; /* Ensures the tilt pivots from the center */
+    perspective: 1000px; /* Adds 3D perspective */
+  }
+  
+  .card-hover-tilt:hover {
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg); /* Slightly tilt and scale */
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2); /* Adds a more prominent shadow */
+  }

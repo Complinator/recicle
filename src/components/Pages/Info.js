@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const Info = () => {
     return (
-        <Container className="bg-light p-0 m-0 vw-120">
+        <Container className="bg-light p-0 m-0 vw-100">
             <h1 className="d-block">hOLA</h1>
         </Container>
     );
