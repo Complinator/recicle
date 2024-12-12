@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Layout/Navbar';
+import AppNavbar from './components/Layout/Navbar';
 import Home from './components/Pages/Home';
 import Activities from './components/Pages/Activities';
 import Points from './components/Pages/Points';
@@ -10,7 +10,7 @@ import Marketplace from './components/Pages/Marketplace';
 function App() {
   return (
     <>
-      <Navbar />
+      <AppNavbar />
       <div>
         <Routes>
           <Route path='/' element={ <Home /> } />
