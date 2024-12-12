@@ -6,6 +6,7 @@ import Activities from './components/Pages/Activities';
 import Points from './components/Pages/Points';
 import Info from './components/Pages/Info';
 import Marketplace from './components/Pages/Marketplace';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='*' element={ <Navigate to='/' replace /> } />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
