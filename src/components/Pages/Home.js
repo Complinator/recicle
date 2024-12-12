@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MapPin, Recycle, BookOpen, ShoppingCart } from 'lucide-react';
 import "../../App.css";
+import Chart from './Components/Chart';
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -55,9 +56,7 @@ const Home = () => {
           </Col>
           <Col md={6}>
             {/* Placeholder for interactive graphic */}
-            <div className="bg-light p-5 rounded text-center">
-              Gráfico Interactivo de RAEE
-            </div>
+            <Chart />
           </Col>
         </Row>
       </Container>
