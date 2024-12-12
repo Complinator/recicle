@@ -79,9 +79,29 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-origin: center; /* Ensures the tilt pivots from the center */
     perspective: 1000px; /* Adds 3D perspective */
-  }
-  
-  .card-hover-tilt:hover {
+}
+
+.card-hover-tilt:hover {
     transform: scale(1.05) rotateX(5deg) rotateY(5deg); /* Slightly tilt and scale */
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2); /* Adds a more prominent shadow */
-  }
+}
+
+.card-hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-hover-glow:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Glowing effect */
+    transform: scale(1.02); /* Slightly scales up the card */
+}
+
+.card-img-dynamic {
+    width: 100%; /* Fixed width */
+    height: 100%; /* Dynamic height based on the card content */
+    object-fit: cover; /* Ensures the image fills its container */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.card-hover-glow:hover .card-img-dynamic {
+    transform: scale(1.1); /* Expands the image on hover */
+}
