@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#002D5A', paddingTop: '40px', paddingBottom: '40px', position: 'relative', minHeight: '300px' }}>
+    <footer style={{ backgroundColor: '#2e5228', paddingTop: '40px', paddingBottom: '40px', position: 'relative', minHeight: '300px', marginTop: "7%" }}>
       {/* Windmills Container */}
       <div className="position-absolute" style={{ top: '-98px', right: '50px', zIndex: 1 }}>
         {/* First Windmill */}
@@ -30,7 +30,7 @@ const Footer = () => {
             <div style={{
               width: '4px',
               height: '20px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(0deg)',
@@ -39,7 +39,7 @@ const Footer = () => {
             <div style={{
               width: '4px',
               height: '20px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(120deg)',
@@ -48,7 +48,7 @@ const Footer = () => {
             <div style={{
               width: '4px',
               height: '20px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(240deg)',
@@ -80,7 +80,7 @@ const Footer = () => {
             <div style={{
               width: '6px',
               height: '30px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(0deg)',
@@ -89,7 +89,7 @@ const Footer = () => {
             <div style={{
               width: '6px',
               height: '30px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(120deg)',
@@ -98,7 +98,7 @@ const Footer = () => {
             <div style={{
               width: '6px',
               height: '30px',
-              backgroundColor: '#87CEEB',
+              backgroundColor: '#0862bd',
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%) rotate(240deg)',
