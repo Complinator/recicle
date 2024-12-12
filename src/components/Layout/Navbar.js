@@ -71,7 +71,7 @@ const AppNavbar = () => {
                         <span 
                             className={`brand-text ${isBrandHovered ? 'brand-text-hover' : ''}`}
                         >
-                            ReciclaAPP
+                            REvuelta
                         </span>
                     </Link>
                 </Navbar.Brand>

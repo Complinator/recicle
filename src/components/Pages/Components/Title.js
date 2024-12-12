@@ -24,7 +24,7 @@ const Title = () => {
                 </div>
                 <div className="mb-2">
                 <Link to='/' className="text-decoration-none d-block">
-                    → ¿Recibió una carta de la Agencia Noruega de Medio Ambiente?
+                    → Consulta sobre como reciclar tus desechos
                     </Link>
                 </div>
                 <div className="mb-2">

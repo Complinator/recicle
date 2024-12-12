@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Carousel, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MapPin, Recycle, BookOpen, ShoppingCart } from 'lucide-react';
 import "../../App.css";
@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </Col>
       </Row>
-
+      
       {/* Problem Overview */}
       <Container className="my-5">
         <Row className="align-items-center">
