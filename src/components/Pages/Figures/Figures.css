@@ -1,0 +1,187 @@
+/* Bicycle */
+
+.bicycle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: "fit-content";
+}
+
+.cls-1 {
+    fill: #e6e6e6;
+}
+
+.cls-10,
+.cls-2,
+.cls-3,
+.cls-4 {
+    fill: none;
+}
+
+.cls-2,
+.cls-3 {
+    stroke-width: 3px;
+}
+
+.cls-2 {
+    stroke-miterlimit: 10;
+    stroke: #333;
+}
+
+.cls-3 {
+    stroke: #bff1ff;
+    stroke-dasharray: 50 50 180;
+}
+
+.cls-10,
+.cls-3,
+.cls-4 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cls-4 {
+    stroke: rgb(233, 153, 34);
+}
+
+.cls-10,
+.cls-4 {
+    stroke-width: 4px;
+}
+
+.cls-10 {
+    stroke: #f2f2f2;
+}
+
+#animateThis {
+    stroke-dasharray: 50 1000;
+}
+
+#animateThis2 {
+    stroke-dasharray: 50 1000;
+}
+
+#effects2,
+#effects4,
+#effects6,
+#effects8,
+#effects10 {
+    stroke: #bff1ff;
+    stroke-dasharray: 10 1000;
+    animation: stroke1 1s infinite;
+}
+
+#effects1,
+#effects3,
+#effects5,
+#effects7,
+#effects9 {
+    stroke-dasharray: 10 1000;
+    animation: stroke2 0.7s infinite;
+}
+
+@keyframes stroke1 {
+    from {
+        stroke-dasharray: 0 1000;
+        opacity: 1;
+    }
+    to {
+        stroke-dasharray: 100 1000;
+        opacity: 0;
+    }
+}
+
+@keyframes stroke2 {
+    from {
+        stroke-dasharray: 0 1000;
+        opacity: 1;
+    }
+    to {
+        stroke-dasharray: 50 1000;
+        opacity: 0;
+    }
+}
+
+/* Batery */
+
+.battery {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0;
+    width: 75%;
+    border: 4px solid gray;
+    height: 90px;
+    border-radius: 15px;
+}
+
+.battery:before {
+content: "";
+position: absolute;
+top: 6px;
+left: 6px;
+height: 69px;
+background-color: rgb(233, 153, 34);
+border-radius: 5px;
+animation: full 10s linear infinite;
+}
+
+.battery:after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: 16px;
+    width: 15px;
+    height: 50px;
+    background-color: gray;
+    border-bottom-right-radius: 90px;
+    border-top-right-radius: 90px;
+}
+
+@keyframes full {
+0% {
+    width: 0%;
+}
+25% {
+    width: 24%;
+}
+50% {
+    width: 48%;
+}
+75% {
+    width: 72%;
+}
+100% {
+    width: 94%;
+}
+}
+
+/* Globe */
+.globe {
+    border: 2px solid #8bc34a;
+    border-radius: 50%;
+    height: 140px;
+    left: 20%;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    
+    svg {
+      animation: rotation 5s linear 0s infinite;
+      
+      path {
+        stroke: #8BC34A;
+      }
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: translateX(0);
+    }
+
+    from {
+        transform: translateX(-50%);
+    }
+}

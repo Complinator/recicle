@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Carousel, Image } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MapPin, Recycle, BookOpen, ShoppingCart } from 'lucide-react';
 import "../../App.css";
 import Chart from './Components/Chart';
+import Globe from './Figures/Globe';
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -12,6 +13,7 @@ const Home = () => {
       {/* Hero Section */}
       <Row className="text-white text-center py-5 mx-0" style={{backgroundColor: "#2e5228"}}>
         <Col>
+        <Globe />
           <h1 className="display-4 mb-4">¡Dale una Segunda Vida a tus Electrónicos!</h1>
           <p className="lead mb-4">
             Los residuos electrónicos no son el fin, sino el inicio de un ciclo. 
