@@ -102,22 +102,6 @@ const Home = () => {
             color: #00A19B;
             animation: fadeIn 1s ease-out;
           }
-
-          .section-title {
-            position: relative;
-            padding-bottom: 15px;
-          }
-
-          .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: #00A19B;
-          }
         `}
       </style>
 
