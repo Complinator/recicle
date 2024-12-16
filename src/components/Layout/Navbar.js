@@ -64,7 +64,7 @@ const AppNavbar = () => {
                         className="d-flex align-items-center text-decoration-none"
                     >
                         <Recycle 
-                            color="green" 
+                            color="#00A19B" 
                             size={50}
                             className={`me-3 brand-icon ${isBrandHovered ? 'brand-icon-hover' : ''}`}
                         />

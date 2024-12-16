@@ -2,6 +2,16 @@
     padding: 0.75rem 1rem;
 }
 
+.button-style {
+    background-color: "#00A19B"; 
+    border-color: "#00A19B";
+}
+
+.button-style:hover {
+    background-color: "#8EC5C0"; 
+    border-color: "#8EC5C0";
+}
+
 .navbar-brand-custom .brand-icon {
     transition: transform 0.4s ease;
 }
@@ -18,7 +28,7 @@
 }
 
 .navbar-brand-custom .brand-text.brand-text-hover {
-    color: green;
+    color: #00A19B;
 }
 
 .nav-link-custom {

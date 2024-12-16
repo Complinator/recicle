@@ -22,7 +22,7 @@ const Chart = () => {
 
   return (
     <Card className="shadow-sm">
-      <Card.Header className="text-white text-center" style={{backgroundColor: "#2e5228"}}>
+      <Card.Header className="text-white text-center" style={{backgroundColor: "#00A19B"}}>
         <h3>Evolución de Residuos Electrónicos en Chile</h3>
       </Card.Header>
       <Card.Body>

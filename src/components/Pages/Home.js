@@ -4,16 +4,14 @@ import { Link } from 'react-router-dom';
 import { MapPin, Recycle, BookOpen, ShoppingCart } from 'lucide-react';
 import "../../App.css";
 import Chart from './Components/Chart';
-import Globe from './Figures/Globe';
 
 const Home = () => {
   const [hover, setHover] = useState(false);
   return (
     <Container fluid className="p-0">
       {/* Hero Section */}
-      <Row className="text-white text-center py-5 mx-0" style={{backgroundColor: "#2e5228"}}>
+      <Row className="text-white text-center py-5 mx-0" style={{backgroundColor: "#00A19B"}}>
         <Col>
-        <Globe />
           <h1 className="display-4 mb-4">¡Dale una Segunda Vida a tus Electrónicos!</h1>
           <p className="lead mb-4">
             Los residuos electrónicos no son el fin, sino el inicio de un ciclo. 
@@ -115,13 +113,13 @@ const Home = () => {
               </Col>
             </Row>
             <div className="mt-4">
-              <Button style={{backgroundColor: "#2e5228", borderColor: "#2e5228"}} className="me-3">
+              <Button style={{backgroundColor: "#00A19B", borderColor: "#00A19B"}} className="me-3">
                 Encontrar Punto de Reciclaje
               </Button>
               <Button style={{
-                borderColor: "#2e5228",
-                backgroundColor: hover ? "#2e5228" : "inherit",
-                color: hover ? "white" : "#2e5228",
+                borderColor: "#00A19B",
+                backgroundColor: hover ? "#00A19B" : "inherit",
+                color: hover ? "white" : "#00A19B",
                 transition: "background-color 0.3s ease, color 0.3s ease",
             }}
             onMouseEnter={() => setHover(true)}

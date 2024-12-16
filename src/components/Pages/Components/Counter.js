@@ -56,7 +56,7 @@ const IconWrapper = styled.div`
 const CounterContainer = styled.div`
   font-size: 3rem;
   font-weight: bold;
-  color: #008000;
+  color: #00A19B;
   position: relative;
   height: 4rem;
   overflow: hidden;
@@ -69,7 +69,7 @@ const Number = styled.span`
 
 const Unit = styled.span`
   font-size: 2rem;
-  color: #008000;
+  color: #00A19B;
   margin-left: 0.5rem;
 `;
 
@@ -103,7 +103,7 @@ const Counter = () => {
       <IconsContainer>
         {icons.map((Icon, index) => (
           <IconWrapper key={index} delay={Icon.delay}>
-            <Icon.Component size={24} color="#68e381" />
+            <Icon.Component size={24} color="#8EC5C0" />
           </IconWrapper>
         ))}
       </IconsContainer>
