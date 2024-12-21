@@ -134,6 +134,10 @@
   filter: invert(1); /* Invert the arrow icon color if needed */
 }
 
+.carousel-indicators button {
+    color: red; /* Set the color you desire */
+}
+
 .section-title {
     position: relative;
     padding-bottom: 15px;

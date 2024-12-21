@@ -198,6 +198,29 @@ const Home = () => {
             </Col>
           ))}
         </Row>
+        <Container className="d-flex justify-content-center align-items-center mt-3">
+              <Button
+                className="px-4 py-2 border-0 shadow"
+                style={{
+                  backgroundColor: "#00A19B",
+                  color: "white",
+                  borderRadius: "30px",
+                  transition: "all 0.3s ease-in-out",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#0d8f8a";
+                  e.target.style.transform = "scale(1.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#00A19B";
+                  e.target.style.transform = "scale(1)";
+                }}
+                as={Link}
+                to="/news"
+              >
+                Más Noticias
+              </Button>
+            </Container>
       </Container>
 
       {/* Testimonios */}
