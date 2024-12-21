@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Carousel, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MapPin, Recycle, BookOpen, ShoppingCart } from 'lucide-react';
+import { MapPin, Recycle, BookOpen, ShoppingCart, Earth, Lightbulb, Settings } from 'lucide-react';
 import "../../App.css";
 import Chart from './Components/Chart';
 
@@ -236,9 +236,9 @@ const Home = () => {
         <h2 className="text-center section-title mb-5">Nuestro Impacto</h2>
         <Row>
           {[
-            { number: "180,000+", text: "Toneladas de RAEE anuales", icon: "🌍" },
-            { number: "10%", text: "Reciclados adecuadamente", icon: "⚙️" },
-            { number: "70%", text: "Reducción de emisiones", icon: "💡" }
+            { number: "180,000+", text: "Toneladas de RAEE anuales", icon: <Earth size={64} style={{color: "#00A19B"}} /> },
+            { number: "10%", text: "Reciclados adecuadamente", icon: <Settings size={64} style={{color: "#00A19B"}} /> },
+            { number: "70%", text: "Reducción de emisiones", icon: <Lightbulb size={64} style={{color: "#00A19B"}} /> }
           ].map((stat, index) => (
             <Col md={4} key={index} className="mb-4">
               <Card className="stat-card h-100 text-center border-0">

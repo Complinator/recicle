@@ -4,14 +4,15 @@ import 'leaflet/dist/leaflet.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InfoCarousel from './Components/Carousel';
 import Map from './Components/Map';
+import { Leaf, Settings, Recycle } from 'lucide-react';
 
 const Points = () => {
   return (
     <Container>
-      <h2 className="my-4">Encuentra tu punto de reciclaje y servicio técnico</h2>
+      <h1 className="text-center section-title mb-5 mt-3">Encuentra tu punto de reciclaje y servicio técnico</h1>
       <p>Localiza fácilmente los puntos de reciclaje, donde puedes desechar tus residuos electrónicos de manera responsable. Además, descubre servicios técnicos locales que reparan tus dispositivos, alargando su vida útil y reduciendo el impacto ambiental.</p>
 
-      <h3 className="my-4">Recicla cerca de ti</h3>
+      <h2 className="text-center section-title mb-5">Recicla cerca de ti</h2>
       <Row>
         <Col md={8}>
           <Map />
@@ -60,44 +61,65 @@ const Points = () => {
         </Col>
       </Row>
 
-      <h3 className="my-4">¿Por qué es importante reciclar?</h3>
+      <h2 className="text-center section-title mb-5 mt-4">¿Por qué es importante reciclar?</h2>
       <Row>
         <Col md={4}>
-          <Card className="h-100">
-            <Card.Body>
-              <i className="fas fa-leaf fa-3x"></i>
-              <Card.Title>Reduce la contaminación</Card.Title>
-              <Card.Text>
-                Al reciclar, evitas que los residuos terminen en vertederos o medios naturales, disminuyendo la contaminación ambiental.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="position-relative">
+            <Leaf 
+              className="position-absolute" 
+              size={36}
+              style={{ top: '-15px', left: '-15px', fontSize: '2rem', color: '#00A19B', zIndex:10 }} 
+            />
+            <Card className="h-100">
+              <Card.Body>
+                <i className="fas fa-leaf fa-3x"></i>
+                <Card.Title>Reduce la contaminación</Card.Title>
+                <Card.Text>
+                  Al reciclar, evitas que los residuos terminen en vertederos o medios naturales, disminuyendo la contaminación ambiental.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </Col>
         <Col md={4}>
-          <Card className="h-100">
-            <Card.Body>
-              <i className="fas fa-cogs fa-3x"></i>
-              <Card.Title>Fomenta la economía circular</Card.Title>
-              <Card.Text>
-                El reciclaje permite reutilizar los materiales, cerrando el ciclo de vida de los productos y fomentando una economía más sostenible.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="position-relative">
+            <Settings 
+              className="position-absolute" 
+              size={36}
+              style={{ top: '-15px', left: '-15px', fontSize: '2rem', color: '#00A19B', zIndex:10 }} 
+            />
+            <Card className="h-100">
+              <Card.Body>
+                <i className="fas fa-cogs fa-3x"></i>
+                <Card.Title>Fomenta la economía circular</Card.Title>
+                <Card.Text>
+                  El reciclaje permite reutilizar los materiales, cerrando el ciclo de vida de los productos y fomentando una economía más sostenible.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </Col>
         <Col md={4}>
-          <Card className="h-100">
-            <Card.Body>
-              <i className="fas fa-recycle fa-3x"></i>
-              <Card.Title>Ahorras recursos valiosos</Card.Title>
-              <Card.Text>
-                Al reciclar, evitas el desperdicio de metales raros y otros materiales importantes que pueden ser reutilizados.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <div className="position-relative">
+            <Recycle 
+              className="position-absolute" 
+              size={36}
+              style={{ top: '-15px', left: '-15px', fontSize: '2rem', color: '#00A19B', zIndex:10 }} 
+            />
+            <Card className="h-100">
+              <Card.Body>
+                <i className="fas fa-recycle fa-3x"></i>
+                <Card.Title>Ahorras recursos valiosos</Card.Title>
+                <Card.Text>
+                  Al reciclar, evitas el desperdicio de metales raros y otros materiales importantes que pueden ser reutilizados.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </Col>
       </Row>
 
-      <h3 className="my-4">Información sobre el reciclaje</h3>
+      <h2 className="text-center section-title mb-5 mt-4">Información sobre el reciclaje</h2>
       <InfoCarousel />
     </Container>
   );

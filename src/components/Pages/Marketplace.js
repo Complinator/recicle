@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
-import { Camera, Upload, ShoppingBag, RefreshCw } from 'lucide-react';
+import { Camera, Upload, ShoppingBag, RefreshCw, Sprout, Banknote, Recycle } from 'lucide-react';
 import ElectronicComponentCard from './Components/Card';
 
 const Marketplace = () => {
@@ -72,9 +72,9 @@ const Marketplace = () => {
   ];
 
   const benefits = [
-    { icon: "🌱", text: "Reducción de residuos electrónicos" },
-    { icon: "💰", text: "Ahorro económico al comprar equipos reacondicionados" },
-    { icon: "♻️", text: "Promoción de la reutilización y el reciclaje" }
+    { icon: <Sprout size={64} className="text-success" />, text: "Reducción de residuos electrónicos" },
+    { icon: <Banknote size={64} className="text-success" />, text: "Ahorro económico al comprar equipos reacondicionados" },
+    { icon: <Recycle size={64} className="text-success" />, text: "Promoción de la reutilización y el reciclaje" }
   ];
 
   return (

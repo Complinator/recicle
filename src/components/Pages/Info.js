@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Counter from "./Components/Counter" // Assuming you have the Counter component
 import { Link } from 'react-router-dom';
 import "../../App.css"
+import { Battery, Earth, Flag, Lightbulb, Recycle, TrendingDown, Wrench } from 'lucide-react';
 
 const StyledSection = styled.section`
   padding: 4rem 0;
@@ -85,16 +86,16 @@ const Info = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <IconText>
-                      🛠️ <strong>Repara antes de desechar:</strong> Busca un servicio técnico que extienda la vida útil de tu dispositivo.
+                      <Wrench size={32} className='text-secondary' /><strong>Repara antes de desechar:</strong> Busca un servicio técnico que extienda la vida útil de tu dispositivo.
                     </IconText>
                     <IconText>
-                      ♻️ <strong>Recicla correctamente:</strong> Lleva tus residuos a puntos de reciclaje autorizados.
+                      <Recycle size={32} className='text-success' /><strong>Recicla correctamente:</strong> Lleva tus residuos a puntos de reciclaje autorizados.
                     </IconText>
                     <IconText>
-                      💡 <strong>Dona o vende dispositivos:</strong> Ofrécelos a alguien que los necesite a través del marketplace.
+                      <Lightbulb size={32} className='text-warning' /><strong>Dona o vende dispositivos:</strong> Ofrécelos a alguien que los necesite a través del marketplace.
                     </IconText>
                     <IconText>
-                      🔋 <strong>Maneja las baterías con cuidado:</strong> Nunca las tires en la basura común.
+                      <Battery size={32} /><strong>Maneja las baterías con cuidado:</strong> Nunca las tires en la basura común.
                     </IconText>
                   </motion.div>
                 </Card.Body>
@@ -183,7 +184,7 @@ const Info = () => {
                     className="rounded-end card-img-dynamic"
                 />
             </Col>
-              <Col lg={6} className="order-last order-lg-first">
+              <Col lg={6}>
                 <CardBody>
                   <CardTitle className="font-bold text-3xl mb-4" style={{color:"#00A19B"}}>
                     Cómo se gestionan los RAEE en Chile
@@ -213,15 +214,15 @@ const Info = () => {
               <Row>
                 {[
                   {
-                    icon: "🌍",
+                    icon: <Earth size={32} style={{color: "#00A19B"}} />,
                     fact: "El mundo genera 50 millones de toneladas de RAEE al año, equivalente al peso de 4,500 Torres Eiffel."
                   },
                   {
-                    icon: "🇨🇱",
+                    icon: <Flag size={32} style={{color: "#00A19B"}} />,
                     fact: "Chile es el segundo país de Latinoamérica que más residuos electrónicos genera per cápita."
                   },
                   {
-                    icon: "📉",
+                    icon: <TrendingDown size={32} style={{color: "#00A19B"}} />,
                     fact: "Reciclar 1 millón de laptops puede ahorrar la energía equivalente al consumo de 3,500 hogares en un año."
                   }
                 ].map((item, index) => (
