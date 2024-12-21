@@ -28,8 +28,17 @@ const AppNavbar = () => {
             }
         },
         { 
-            to: "/activities", 
-            label: "Actividades", 
+            to: "/aboutus", 
+            label: "Nosotros", 
+            hoverStyle: {
+                backgroundColor: '#ffc107',
+                color: 'white',
+                borderColor: '#ffc107'
+            }
+        },
+        { 
+            to: "/news", 
+            label: "Noticias", 
             hoverStyle: {
                 backgroundColor: '#ffc107',
                 color: 'white',

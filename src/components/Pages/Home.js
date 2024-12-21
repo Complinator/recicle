@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Carousel, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MapPin, Recycle, BookOpen, ShoppingCart, Earth, Lightbulb, Settings } from 'lucide-react';
+import { Earth, Lightbulb, Settings } from 'lucide-react';
 import "../../App.css";
 import Chart from './Components/Chart';
 
 const Home = () => {
-  const [hover, setHover] = useState(false);
-  
   const [news] = useState([
     {
       title: "Nueva ley de reciclaje electrónico en Chile",
@@ -116,10 +114,10 @@ const Home = () => {
                 para reducir el impacto ambiental y fomentar la economía circular
               </p>
               <div className="d-flex justify-content-center gap-3">
-                <Button className="action-button" variant="light" as={Link} to="/puntos-reciclaje">
+                <Button className="action-button" variant="light" as={Link} to="/points">
                   Encuentra un Punto de Reciclaje
                 </Button>
-                <Button className="action-button" variant="outline-light" as={Link} to="/talleres">
+                <Button className="action-button" variant="outline-light" as={Link} to="/news">
                   Explora Talleres
                 </Button>
               </div>
@@ -157,76 +155,6 @@ const Home = () => {
           <Col md={6}>
             {/* Placeholder for interactive graphic */}
             <Chart />
-          </Col>
-        </Row>
-      </Container>
-
-      {/* How to Contribute */}
-      <Container className="my-5 bg-light py-5">
-        <Row>
-          <Col className="text-center">
-          <h2 className="text-center section-title mb-5">Unete a REvuelta</h2>
-            <Row className="g-4">
-              <Col md={3}>
-                <Card className="h-100 text-center border-0 bg-transparent">
-                  <Recycle size={64} className="mx-auto mb-3 text-primary" />
-                  <Card.Body>
-                    <Card.Title>Recicla</Card.Title>
-                    <Card.Text>
-                      Tus electrónicos en nuestros puntos de acopio
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3}>
-                <Card className="h-100 text-center border-0 bg-transparent">
-                  <BookOpen size={64} className="mx-auto mb-3 text-success" />
-                  <Card.Body>
-                    <Card.Title>Aprende</Card.Title>
-                    <Card.Text>
-                      En nuestros talleres sobre gestión de electrónicos
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3}>
-                <Card className="h-100 text-center border-0 bg-transparent">
-                  <ShoppingCart size={64} className="mx-auto mb-3 text-info" />
-                  <Card.Body>
-                    <Card.Title>Comercializa</Card.Title>
-                    <Card.Text>
-                      Dispositivos de segunda mano en nuestro marketplace
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3}>
-                <Card className="h-100 text-center border-0 bg-transparent">
-                  <MapPin size={64} className="mx-auto mb-3 text-warning" />
-                  <Card.Body>
-                    <Card.Title>Encuentra</Card.Title>
-                    <Card.Text>
-                      Puntos de reciclaje cerca de ti
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-            <div className="mt-4">
-              <Button style={{backgroundColor: "#00A19B", borderColor: "#00A19B"}} className="me-3">
-                Encontrar Punto de Reciclaje
-              </Button>
-              <Button style={{
-                borderColor: "#00A19B",
-                backgroundColor: hover ? "#00A19B" : "inherit",
-                color: hover ? "white" : "#00A19B",
-                transition: "background-color 0.3s ease, color 0.3s ease",
-            }}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}>
-                Participar en Taller
-              </Button>
-            </div>
           </Col>
         </Row>
       </Container>
