@@ -259,7 +259,7 @@ const Map = () => {
     };
 
     const InfoPanel = ({ point, onClose }) => {
-        const [isVisible, setIsVisible] = React.useState(false);
+        const [isVisible, setIsVisible] = useState(false);
 
         React.useEffect(() => {
             if (point) {
@@ -275,12 +275,13 @@ const Map = () => {
             <div 
                 className="position-absolute top-0 h-100" 
                 style={{ 
-                    width: '30%',
+                    width: window.innerWidth > 768? '30%' : '100%',
                     right: isVisible ? '0' : '-30%',
                     zIndex: 1000,
                     backgroundColor: 'white',
                     boxShadow: '-2px 0 5px rgba(0,0,0,0.1)',
                     transition: 'right 0.3s ease-in-out',
+                    overflowY: 'auto', // Enable vertical scrolling
                 }}
             >
                 <Card className="h-100 border-0">
