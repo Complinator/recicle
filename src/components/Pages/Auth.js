@@ -1,147 +1,107 @@
-import React, { useState } from 'react';
-import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/Auth';
+import React, { useState } from "react";
+import { FaLock, FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/Auth";
+import "../../App.css";
+import { Alert } from "react-bootstrap";
+import { MdAlternateEmail } from "react-icons/md";
 
-export const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const { login } = useAuth();
-  const navigate = useNavigate();
+const Auth = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [isLogin, setIsLogin] = useState(true);
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        name: ''
+    });
+    const { login, register } = useAuth();
+    const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const success = login(email, password);
-    if (success) {
-      navigate('/');
-    } else {
-      setError('Correo electrónico o contraseña incorrectos');
-    }
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (isLogin) {
+            const success = login(email, password);
+            if (success) {
+                navigate('/');
+            } else {
+                setError('Correo electrónico o contraseña incorrectos');
+            }
+        } else {
+            if (formData.password !== formData.confirmPassword) {
+                setError('Las contraseñas no coinciden');
+                return;
+            }
+            
+            const success = register(formData.email, formData.password, formData.name);
+            if (success) {
+                navigate('/');
+            } else {
+                setError('El correo electrónico ya está registrado');
+            }
+        }
+    };
 
-  return (
-    <Container className="d-flex justify-content-center align-items-center min-vh-100">
-      <Card className="shadow" style={{ maxWidth: '400px', width: '100%' }}>
-        <Card.Body className="p-4">
-          <h2 className="text-center mb-4">Iniciar Sesión</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Correo Electrónico</Form.Label>
-              <Form.Control
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-4">
-              <Form.Label>Contraseña</Form.Label>
-              <Form.Control
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </Form.Group>
-            <Button variant="primary" type="submit" className="w-100">
-              Iniciar Sesión
-            </Button>
-          </Form>
-          <div className="text-center mt-3">
-            <span>¿No tienes una cuenta? </span>
-            <Button variant="link" className="p-0" onClick={() => navigate('/register')}>
-              Regístrate
-            </Button>
-          </div>
-        </Card.Body>
-      </Card>
-    </Container>
-  );
+    return (
+        <div className="wrapper">
+            <div className="in-wrapper">
+                <form action="" onSubmit={handleSubmit}>
+                    <h1 className="mb-3">{isLogin? "Iniciar Sesión" : "Registrarse"}</h1>
+
+                    {
+                    isLogin &&
+                    <>
+                        {error && <Alert variant="danger" style={{fontSize: "0.9rem"}}>{error}</Alert>}
+                        <div className="input-box">
+                            <input type="email" placeholder="Correo Electrónico" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <FaUser className="icon" />
+                        </div>
+                        <div className="input-box">
+                            <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <FaLock className="icon" />
+                        </div>
+
+                        <div className="remember-forgot mt-2">
+                            <label><input type="checkbox" />Recuerdame</label>
+                            <button>¿Contraseña olvidada?</button>
+                        </div>
+                    </>
+                    }
+
+                    {
+                    !isLogin &&
+                    <>
+                        {error && <Alert variant="danger" style={{fontSize: "0.9rem"}}>{error}</Alert>}
+                        <div className="input-box">
+                            <input type="text" placeholder="Nombre Completo" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
+                            <FaUser className="icon" />
+                        </div>
+                        <div className="input-box">
+                            <input type="email" placeholder="Correo Electrónico" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
+                            <MdAlternateEmail className="icon" />
+                        </div>
+                        <div className="input-box">
+                            <input type="password" placeholder="Contraseña" value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} required />
+                            <FaLock className="icon" />
+                        </div>
+                        <div className="input-box">
+                            <input type="password" placeholder="Confirmar Contraseña" value={formData.confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} required />
+                            <FaLock className="icon" />
+                        </div>
+                    </>
+                    }
+
+                    <button type="submit">{isLogin? "Iniciar Sesión" : "Registrarse"}</button>
+
+                    <div className="register-link">
+                        <p>{isLogin? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"} <button onClick={() => {setIsLogin(!isLogin); setError("")}}>{isLogin? "Registrarse" : "Iniciar sesión"}</button></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
 };
 
-export const RegisterPage = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    name: ''
-  });
-  const [error, setError] = useState('');
-  const { register } = useAuth();
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setError('Las contraseñas no coinciden');
-      return;
-    }
-    
-    const success = register(formData.email, formData.password, formData.name);
-    if (success) {
-      navigate('/');
-    } else {
-      setError('El correo electrónico ya está registrado');
-    }
-  };
-
-  return (
-    <Container className="d-flex justify-content-center align-items-center min-vh-100">
-      <Card className="shadow" style={{ maxWidth: '400px', width: '100%' }}>
-        <Card.Body className="p-4">
-          <h2 className="text-center mb-4">Registro</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Nombre Completo</Form.Label>
-              <Form.Control
-                type="text"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Correo Electrónico</Form.Label>
-              <Form.Control
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Contraseña</Form.Label>
-              <Form.Control
-                type="password"
-                value={formData.password}
-                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                required
-              />
-            </Form.Group>
-            <Form.Group className="mb-4">
-              <Form.Label>Confirmar Contraseña</Form.Label>
-              <Form.Control
-                type="password"
-                value={formData.confirmPassword}
-                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                required
-              />
-            </Form.Group>
-            <Button variant="primary" type="submit" className="w-100">
-              Registrarse
-            </Button>
-          </Form>
-          <div className="text-center mt-3">
-            <span>¿Ya tienes una cuenta? </span>
-            <Button variant="link" className="p-0" onClick={() => navigate('/login')}>
-              Inicia Sesión
-            </Button>
-          </div>
-        </Card.Body>
-      </Card>
-    </Container>
-  );
-};
+export default Auth;

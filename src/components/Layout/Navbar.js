@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Recycle, User, UserPlus, LogOut } from 'lucide-react';
+import { Recycle, User, UserPlus } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
@@ -169,7 +169,7 @@ const AppNavbar = () => {
                                 <Button 
                                     variant="link"
                                     className="p-1 d-flex align-items-center justify-content-center"
-                                    onClick={() => navigate('/login')}
+                                    onClick={() => navigate('/auth')}
                                     onMouseEnter={() => setIsProfileHovered(true)}
                                     onMouseLeave={() => setIsProfileHovered(false)}
                                     style={profileButtonHoverStyle}
