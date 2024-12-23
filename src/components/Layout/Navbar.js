@@ -20,7 +20,7 @@ const AppNavbar = () => {
             label: "Localización", 
             hoverStyle: {
                 backgroundColor: '#28a745',
-                color: 'white',
+                color: '#8EC5C0',
                 borderColor: '#28a745'
             }
         },
@@ -29,7 +29,7 @@ const AppNavbar = () => {
             label: "Información", 
             hoverStyle: {
                 backgroundColor: '#17a2b8',
-                color: 'white',
+                color: '#8EC5C0',
                 borderColor: '#17a2b8'
             }
         },
@@ -38,7 +38,7 @@ const AppNavbar = () => {
             label: "Nosotros", 
             hoverStyle: {
                 backgroundColor: '#ffc107',
-                color: 'white',
+                color: '#8EC5C0',
                 borderColor: '#ffc107'
             }
         },
@@ -47,7 +47,7 @@ const AppNavbar = () => {
             label: "Noticias", 
             hoverStyle: {
                 backgroundColor: '#ffc107',
-                color: 'white',
+                color: '#8EC5C0',
                 borderColor: '#ffc107'
             }
         },
@@ -56,7 +56,7 @@ const AppNavbar = () => {
             label: "Tienda", 
             hoverStyle: {
                 backgroundColor: '#dc3545',
-                color: 'white',
+                color: '#8EC5C0',
                 borderColor: '#dc3545'
             }
         }
