@@ -59,7 +59,16 @@ const AppNavbar = () => {
                 color: '#8EC5C0',
                 borderColor: '#dc3545'
             }
-        }
+        },
+        { 
+            to: "/contactus", 
+            label: "Contacto", 
+            hoverStyle: {
+                backgroundColor: '#28a745',
+                color: '#8EC5C0',
+                borderColor: '#28a745'
+            }
+        },
     ];
 
      // Profile button styles

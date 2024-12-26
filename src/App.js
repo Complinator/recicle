@@ -9,6 +9,7 @@ import AboutUs from './components/Pages/AboutUs';
 import { AuthProvider } from './context/Auth';
 import Auth from './components/Pages/Auth';
 import Layout from './context/Layout';
+import ContactUs from './components/Pages/ContactUs';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/info' element={<Info />} />
           <Route path='/market' element={<Marketplace />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/contactus" element={<ContactUs />} />
           <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </Layout>
