@@ -105,7 +105,7 @@ const AppNavbar = () => {
                             to="/" 
                             className="d-flex align-items-center text-decoration-none"
                         >
-                            <Recycle 
+                            {/* <Recycle 
                                 color="#00A19B" 
                                 size={50}
                                 className={`brand-icon ${isBrandHovered ? 'brand-icon-hover' : ''}`}
@@ -114,7 +114,8 @@ const AppNavbar = () => {
                                 className={`brand-text ms-2 ${isBrandHovered ? 'brand-text-hover' : ''}`}
                             >
                                 REvuelta
-                            </span>
+                            </span> */}
+                            <img src="/Img/Logo.png" alt="Logo" style={{height: "70px", marginTop: "-20px"}} />
                         </Link>
                     </Navbar.Brand>
 

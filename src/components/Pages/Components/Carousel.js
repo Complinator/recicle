@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Bicycle from '../Figures/Bicycle';
 import Batery from '../Figures/Batery';
 import Globe from '../Figures/Globe';
+import { Earth } from 'lucide-react';
 
 const AnimatedIcon = ({ icon, color }) => {
   return (
@@ -57,7 +58,7 @@ const InfoCarousel = () => {
     ],
     [
       {
-        Icon: () => Globe,
+        Icon: () => <Earth size={64} />,
         title: "Cable reciclado",
         text: "16 209 toneladas de cable reciclado, equivalente a dar cuatro vueltas alrededor del planeta."
       },
