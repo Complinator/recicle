@@ -6,6 +6,7 @@ import Counter from "./Components/Counter" // Assuming you have the Counter comp
 import { Link } from 'react-router-dom';
 import "../../App.css"
 import { Battery, Earth, Flag, Lightbulb, Recycle, TrendingDown, Wrench } from 'lucide-react';
+import DownloadSection from './Components/Download';
 
 const StyledSection = styled.section`
   padding: 4rem 0;
@@ -267,6 +268,9 @@ const Info = () => {
                 </Card.Body>
               </GradientCard>
             </Col>
+          </Row>
+          <Row>
+            <DownloadSection />
           </Row>
         </Container>
       </StyledSection>
